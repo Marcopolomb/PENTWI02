@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title -Taller Mecanico Boot</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Taller Mecanico</h1>
+        <p class="lead">Estamos a su servicio.</p>
+                    <ul class="nav nav-pills">
+                        <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li class="active">@Html.ActionLink("Clientes", "Clientes", "Home")</li>
+                        <li class="active">@Html.ActionLink("Conocenos", "Conocenos", "Home")</li>
+                        <li class="active">@Html.ActionLink("Contacto", "Contacto", "Home")</li>
+                    </ul>
+    </div>
+    <div id="body" class="container body-content">
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - Practica BootStrap</p>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
